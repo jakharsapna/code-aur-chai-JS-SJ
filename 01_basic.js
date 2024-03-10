@@ -48,4 +48,5 @@ console.table([null > 0 ,null==0 , null<=0 , null>=0]) //but for undefined all t
 
  /****************** */
 
- //strickt check === //loose check==
+ //strickt check( === )//loose check(==)
+
