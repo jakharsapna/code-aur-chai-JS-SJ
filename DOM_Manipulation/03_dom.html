@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 3 | SJ </title>
+</head>
+<body style="background-color: rgb(156, 126, 87);">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+    <script>
+        function addLangu(langName){
+            const li =document.createElement("li")
+            li.innerHTML=langName
+            document.querySelector('.language').appendChild(li)
+        }
+        addLangu("python")
+        addLangu("typeScript") // not optimaize whole tree traverse
+    
+        function addOptiLangu(langName){
+            const li =document.createElement("li")
+            // li.innerHTML=langName
+            li.appendChild(document.createTextNode(langName +" (optimize)"))
+            document.querySelector('.language').appendChild(li)
+        }
+        addOptiLangu("python")
+        addOptiLangu("typeScript")
+
+        //Edit
+        const secondChild= document.querySelector("li:nth-child(2)")
+        // secondChild.innerHTML="Mojo" not optimize
+        const newli= document.createElement("li")
+        newli.textContent="Mojo"
+        secondChild.replaceWith(newli ," (replaceWith)")
+        const firstChild= document.querySelector("li:first-child")
+        firstChild.outerHTML="<li>js (outerHTML)</li>"
+
+        const lastchild= document.querySelector("li:last-child")
+        lastchild.remove()
+    </script>
+</body>
+</html>

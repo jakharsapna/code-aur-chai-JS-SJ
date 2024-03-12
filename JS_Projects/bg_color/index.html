@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bg-Color Changer | SJ</title>
+</head>
+<body>
+    <style>
+        .box{
+            height: 40px;
+            width: 40px;
+           padding: 10px;
+          
+            text-align: center;
+            border-radius: 6px;
+            border: 2px solid black;
+        }
+        .container{
+            display: flex;
+            position: fixed;
+            bottom: 20px;
+            gap: 20px;
+            
+        }
+        body {
+           
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+        }
+        #pink{
+            background-color: pink;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #green{
+            background-color: green;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #red{
+            background-color: red;
+        }
+    </style>
+    <h1>Bg-Color Changer</h1>
+    <div class="container">
+        <div class="box" id="yellow">yellow</div>
+        <div class="box" id="green">green</div>
+        <div class="box" id="blue">blue</div>
+        <div class="box" id="red">red</div>
+        <div class="box" id="pink">pink</div>
+    </div>
+    
+</body>
+</html><script src="index.js"></script>
